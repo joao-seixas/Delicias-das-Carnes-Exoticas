@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@200;400&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+#quem-somos, #nossos-cortes, #fale-conosco, #localizacao {
+  scroll-margin-top: 50px;
+}
+
+body {
+  font-family: 'Urbanist', sans-serif;
+  color: white;
+  background-color: #8b0000;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  padding: 0;
+}
+
+.capa {
+  background-image: url(./img/capa.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: auto;
+  padding: 10px;
+}
+
+.titulo {
+  margin: 70px 0 0 0;
+  padding: 10px;
+  background-color: rgb(0, 0, 0, 0.3);
+  width: min(50vw, 500px);
+}
+
+#logo {
+  width: 100%;
+}
+
+.navegador, .rodape {
+  width: 100%;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-evenly;
+  user-select: none;
+  background-color: rgb(139, 0, 0, 0.4);
+  padding: 0;
+}
+
+.navegador {
+  position: fixed;
+}
+
+.navegador li, .rodape li {
+  padding: 10px;
+}
+
+.navegador li:hover, .rodape li:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#sanduiche {
+  display: none;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  background-color: rgb(139, 0, 0, 0.4);
+  padding: 5px;
+}
+
+section {
+  margin: 15px;
+  background-color: rgb(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+figure {
+  display: table;
+  margin: 0;
+  padding: 8px;
+}
+
+figcaption {
+  display: table-caption;
+  caption-side: bottom;
+  text-align: center;
+  font-size: large;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.coluna {
+  flex: 25%;
+  max-width: 25%;
+}
+
+.coluna img {
+  vertical-align: middle;
+  width: 100%;
+  padding-top: 30px;
+}
+
+#mapa {
+  border: none;
+  width: min(80vw, 800px);
+  height: min(50vw, 500px);
+}
+
+.icones {
+  width: 25px;
+  height: 25px;
+}
+
+#rodape {
+  background-color: rgb(255, 255, 255, 0.1);
+}
+
+@media screen and (max-width: 800px) {
+  .coluna {
+    flex: 50%;
+    max-width: 50%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .capa {
+    background-image: url(./img/capa-pequena.jpg);
+    background-size: auto;
+    background-position: top;
+  }
+
+  #sanduiche {
+    display: block;
+  }
+
+  .navegador {
+    display: none;
+    width: 120px;
+    flex-direction: column;
+    right: 0;
+    top: 0;
+    margin: 70px 5px;
+    text-align: right;
+    overflow: hidden;
+  }
+
+  .titulo {
+    margin: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .coluna {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
